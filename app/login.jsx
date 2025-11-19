@@ -37,25 +37,34 @@ export default function Login() {
       />
 
       
-      <TouchableOpacity
-        style={styles.setRow}
-        onPress={() => setRemember(!remember)}
-      >
-        <View style={styles.checkbox}>
-          {remember && <View style={styles.checkboxInner} />}
-        </View>
-        <Text style={styles.rememberText}>remember me</Text>
-      </TouchableOpacity>
+      <View style={styles.setRow}>
 
-      <TouchableOpacity
-        style={styles.setRow}
-        onPress={() => setShow(!show)}
-      >
-        <View style={styles.checkbox}>
-          {show && <View style={styles.checkboxInner} />}
-        </View>
-        <Text style={styles.rememberText}>Show Password</Text>
-      </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.setRowME}
+          onPress={() => setRemember(!remember)}
+        >
+          <View style={styles.checkbox}>
+            {remember && <View style={styles.checkboxInner} />}
+          </View>
+          <Text style={styles.rememberText}>remember me</Text>
+        </TouchableOpacity>
+
+        
+        
+        
+        <TouchableOpacity
+          style={styles.setRow}
+          onPress={() => setShow(!show)}
+        >
+          <View style={styles.checkbox}>
+            {show && <View style={styles.checkboxInner} />}
+          </View>
+          <Text style={styles.rememberText}>Show Password</Text>
+        </TouchableOpacity>
+
+
+      </View>
 
 
 
@@ -109,6 +118,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 30,
+  },
+
+  setRowME: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 30,
+    marginInline:23,
   },
 
   checkbox: {
